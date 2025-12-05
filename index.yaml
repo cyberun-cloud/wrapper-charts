@@ -1,0 +1,13 @@
+apiVersion: v1
+entries:
+  postgres:
+  - apiVersion: v2
+    created: "2025-12-05T07:30:23.817183824Z"
+    description: A simplified CNPG wrapper for project users.
+    digest: c7fdafd248a0d1c7dc78987a90af4f3b36fcc306c8276167981be538612c4fad
+    name: postgres
+    type: application
+    urls:
+    - https://github.com/cyberun-cloud/wrapper-charts/releases/download/postgres-0.1.0/postgres-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-12-05T07:30:23.817190095Z"
