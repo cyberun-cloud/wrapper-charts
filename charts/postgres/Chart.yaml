@@ -2,4 +2,4 @@ apiVersion: v2
 name: postgres
 description: A simplified CNPG wrapper for project users.
 type: application
-version: 0.1.0
+version: 0.1.1

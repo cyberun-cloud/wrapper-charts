@@ -10,7 +10,7 @@ spec:
   instances: {{ .Values.global.instances }}
   storage:
     size: {{ .Values.storage.size }}
-    storageClass: {{ .Values.storage.class }}
+    storageClass: ceph-rbd
   bootstrap:
     initdb:
       database: {{ .Values.global.database }}
