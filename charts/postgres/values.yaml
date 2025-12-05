@@ -1,0 +1,7 @@
+global:
+  instances: 2
+  database: mydatabase
+
+storage:
+  size: 5Gi
+  class: ceph-rbd

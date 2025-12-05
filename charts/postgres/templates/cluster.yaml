@@ -1,0 +1,17 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: {{ .Release.Name }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app.cyberun.cloud/chart-name: postgres
+    app.cyberun.cloud/repo-name: wrapper-charts
+spec:
+  instances: {{ .Values.global.instances }}
+  storage:
+    size: {{ .Values.storage.size }}
+    storageClass: {{ .Values.storage.class }}
+  bootstrap:
+    initdb:
+      database: {{ .Values.global.database }}
+      owner: {{ .Values.global.database }}
