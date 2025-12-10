@@ -12,5 +12,5 @@ questions:
     type: string
     label: "Database Name"
     description: "The name of the initial database to create."
-    default: "mydatabase"
+    default: "app"
     group: "Global Settings"
