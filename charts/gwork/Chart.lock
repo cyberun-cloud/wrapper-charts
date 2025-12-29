@@ -6,4 +6,4 @@ dependencies:
   repository: file://../../charts/comfyui
   version: 0.1.0
 digest: sha256:85353bbe4149ec1f7af554ebefccd6103bf6ab0fd91bee87f02ac130194b7a8e
-generated: "2025-12-30T04:18:36.219981+08:00"
+generated: "2025-12-30T04:30:55.43223+08:00"
