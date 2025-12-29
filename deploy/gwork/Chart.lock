@@ -1,0 +1,9 @@
+dependencies:
+- name: oauth2-proxy
+  repository: https://oauth2-proxy.github.io/manifests/
+  version: 10.0.0
+- name: comfyui
+  repository: file://../../charts/comfyui
+  version: 0.1.0
+digest: sha256:85353bbe4149ec1f7af554ebefccd6103bf6ab0fd91bee87f02ac130194b7a8e
+generated: "2025-12-30T04:18:36.219981+08:00"

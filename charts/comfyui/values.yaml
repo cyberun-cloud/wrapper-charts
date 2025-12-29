@@ -1,0 +1,52 @@
+replicaCount: 1
+
+image:
+  repository: yanwk/comfyui-boot
+  pullPolicy: IfNotPresent
+  tag: "cu128-slim"
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: ClusterIP
+  port: 8188
+  annotations:
+    service.cilium.io/global: "true"
+
+resources:
+  limits:
+    cpu: "4"
+    memory: "16Gi"
+    nvidia.com/gpu: 1
+  requests:
+    cpu: "2"
+    memory: "8Gi"
+    nvidia.com/gpu: 1
+
+persistence:
+  storageClassName: "piraeus-lvm-single"
+  accessModes:
+    - ReadWriteMany
+  volumes:
+    shared-models:
+      mountPath: /root/ComfyUI/models
+    shared-outputs:
+      mountPath: /root/ComfyUI/output
+    shared-inputs:
+      mountPath: /root/ComfyUI/input
+    shared-workflows:
+      mountPath: /root/ComfyUI/user/default/workflows
+
+gpus:
+  - "NVIDIA-H200-14C"
+  - "NVIDIA-A100-SXM4-80GB"
+
+affinity: {}
+nodeSelector: {}
+tolerations: []
+
+securityContext:
+  seccompProfile:
+    type: RuntimeDefault

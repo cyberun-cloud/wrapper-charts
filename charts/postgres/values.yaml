@@ -1,6 +1,0 @@
-global:
-  instances: 2
-  database: app
-
-storage:
-  size: 5Gi
