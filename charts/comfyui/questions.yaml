@@ -1,0 +1,7 @@
+questions:
+  - variable: domain
+    type: string
+    label: "Domain"
+    description: "The domain name for the ComfyUI service."
+    default: "comfyui.apps.cyberun.cloud"
+    group: "Global Settings"

@@ -1,3 +1,5 @@
+domain: comfyui.apps.cyberun.cloud
+
 replicaCount: 1
 
 image:

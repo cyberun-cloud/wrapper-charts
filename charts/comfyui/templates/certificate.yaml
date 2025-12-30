@@ -1,0 +1,11 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: {{ include "comfyui.fullname" . }}
+spec:
+  secretName: "{{ .Values.domain }}-tls"
+  dnsNames:
+    - "{{ .Values.domain }}"
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
