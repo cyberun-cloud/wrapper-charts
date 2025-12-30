@@ -14,8 +14,6 @@ fullnameOverride: ""
 service:
   type: ClusterIP
   port: 8188
-  annotations:
-    service.cilium.io/global: "true"
 
 resources:
   limits:
@@ -38,8 +36,6 @@ persistence:
       mountPath: /root/ComfyUI/output
     shared-inputs:
       mountPath: /root/ComfyUI/input
-    shared-workflows:
-      mountPath: /root/ComfyUI/user/default/workflows
 
 gpus:
   - "NVIDIA-H200-14C"
@@ -50,5 +46,6 @@ nodeSelector: {}
 tolerations: []
 
 securityContext:
+  fsGroup: 0
   seccompProfile:
     type: RuntimeDefault
