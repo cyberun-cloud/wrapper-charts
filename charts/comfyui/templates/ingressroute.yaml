@@ -10,7 +10,6 @@ spec:
       kind: Rule
       middlewares:
         - name: oauth2-auth
-          namespace: oauth2-proxy
       services:
         - name: {{ include "comfyui.fullname" . }}
           port: {{ .Values.service.port }}
