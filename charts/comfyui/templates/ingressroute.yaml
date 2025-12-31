@@ -4,7 +4,10 @@ metadata:
   name: {{ include "comfyui.fullname" . }}
 spec:
   entryPoints:
-    - websecure
+    # Use INSECURE entry point because ComfyUI encode slashes in URL path,
+    # which causes 400 Bad Request errors on SECURE entry point.
+    # See: https://doc.traefik.io/traefik/v3.6/migrate/v3/#v364
+    - webinsecure
   routes:
     - match: Host(`{{ .Values.domain }}`)
       kind: Rule
