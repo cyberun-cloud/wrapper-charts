@@ -3,6 +3,16 @@ entries:
   comfyui:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2025-12-31T05:52:06.042750777Z"
+    description: A Helm chart for ComfyUI with GPU support
+    digest: e16dc34a11c78f741ae754fd86d470c249c5a6da2a515e59b8d62041cecab3cc
+    name: comfyui
+    type: application
+    urls:
+    - https://github.com/cyberun-cloud/wrapper-charts/releases/download/comfyui-0.1.6/comfyui-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2025-12-31T05:16:29.408298004Z"
     description: A Helm chart for ComfyUI with GPU support
     digest: cf694eedc798317b1117d448f7ba9ef1733688a1e46fef743b9986a15f6b0477
@@ -51,4 +61,4 @@ entries:
     urls:
     - https://github.com/cyberun-cloud/wrapper-charts/releases/download/comfyui-0.1.1/comfyui-0.1.1.tgz
     version: 0.1.1
-generated: "2025-12-31T05:16:29.408318393Z"
+generated: "2025-12-31T05:52:06.042774081Z"
