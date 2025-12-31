@@ -1,32 +1,13 @@
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
-  name: {{ include "comfyui.fullname" . }}-redirect
-spec:
-  entryPoints:
-    - websecure
-  routes:
-    - match: Host(`{{ .Values.domain }}`)
-      kind: Rule
-      middlewares:
-        - name: redirect-https-to-9000
-      services:
-        - name: noop@internal
-          kind: TraefikService
-  tls:
-    secretName: "{{ .Values.domain }}-tls"
-
----
-apiVersion: traefik.io/v1alpha1
-kind: IngressRoute
-metadata:
   name: {{ include "comfyui.fullname" . }}
 spec:
   entryPoints:
     # Use INSECURE entry point because ComfyUI encode slashes in URL path,
     # which causes 400 Bad Request errors on SECURE entry point.
     # See: https://doc.traefik.io/traefik/v3.6/migrate/v3/#v364
-    - webinsecure
+    - websecure
   routes:
     - match: Host(`{{ .Values.domain }}`)
       kind: Rule
