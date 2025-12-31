@@ -1,7 +1,21 @@
 questions:
   - variable: domain
     type: string
-    label: "Domain"
-    description: "The domain name for the ComfyUI service."
+    label: "Full Domain Name"
+    description: "The full domain name where App will be accessible. (Currently only *.apps.cyberun.cloud is supported)"
     default: "comfyui.apps.cyberun.cloud"
     group: "Global Settings"
+
+  - variable: gpus[0]
+    type: string
+    label: "Preferred GPU Model"
+    description: "The preferred GPU model. If unavailable, one will be selected randomly."
+    default: "NVIDIA-H200-14C"
+    group: "Global Settings"
+
+  - variable: hfToken
+    type: password
+    label: "Hugging Face Token"
+    description: "Your Hugging Face token for downloading models. Leave blank if not needed."
+    group: "Global Settings"
+    default: ""

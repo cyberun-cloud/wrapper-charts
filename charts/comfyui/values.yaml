@@ -36,10 +36,11 @@ persistence:
       mountPath: /root/ComfyUI/output
     shared-inputs:
       mountPath: /root/ComfyUI/input
+    shared-workflows:
+      mountPath: /root/ComfyUI/user/default/workflows
 
 gpus:
   - "NVIDIA-H200-14C"
-  - "NVIDIA-A100-SXM4-80GB"
 
 affinity: {}
 nodeSelector: {}
@@ -49,3 +50,5 @@ securityContext:
   fsGroup: 0
   seccompProfile:
     type: RuntimeDefault
+
+hfToken: ""

@@ -35,6 +35,11 @@ spec:
               protocol: TCP
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          {{- if .Values.hfToken }}
+          env:
+            - name: HF_TOKEN
+              value: {{ .Values.hfToken }}
+          {{- end }}
           volumeMounts:
             {{- range $key, $val := .Values.persistence.volumes }}
             - name: {{ $key }}
