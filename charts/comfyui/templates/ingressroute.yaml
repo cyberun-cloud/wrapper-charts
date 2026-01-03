@@ -9,7 +9,7 @@ spec:
     # See: https://doc.traefik.io/traefik/v3.6/migrate/v3/#v364
     - websecure
   routes:
-    - match: Host(`{{ .Values.domain }}`)
+    - match: Host(`{{ include "comfyui.domain" . }}`)
       kind: Rule
       middlewares:
         - name: oauth2-auth
@@ -17,4 +17,4 @@ spec:
         - name: {{ include "comfyui.fullname" . }}
           port: {{ .Values.service.port }}
   tls:
-    secretName: "{{ .Values.domain }}-tls"
+    secretName: "{{ include "comfyui.domain" . }}-tls"

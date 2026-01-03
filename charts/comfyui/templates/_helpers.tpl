@@ -49,3 +49,10 @@ app.kubernetes.io/name: {{ include "comfyui.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 app: comfyui
 {{- end }}
+
+{{/*
+Create the domain name.
+*/}}
+{{- define "comfyui.domain" -}}
+{{- printf "%s.comfyui.cyberun.cloud" .Release.Name }}
+{{- end -}}

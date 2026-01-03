@@ -1,5 +1,3 @@
-domain: comfyui.apps.cyberun.cloud
-
 replicaCount: 1
 
 image:
@@ -39,8 +37,7 @@ persistence:
     shared-workflows:
       mountPath: /root/ComfyUI/user/default/workflows
 
-gpus:
-  - "NVIDIA-H200-14C"
+gpus: []
 
 affinity: {}
 nodeSelector: {}
