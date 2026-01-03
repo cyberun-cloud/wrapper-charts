@@ -1,18 +1,3 @@
-replicaCount: 1
-
-image:
-  repository: yanwk/comfyui-boot
-  pullPolicy: IfNotPresent
-  tag: "cu128-slim"
-
-imagePullSecrets: []
-nameOverride: ""
-fullnameOverride: ""
-
-service:
-  type: ClusterIP
-  port: 8188
-
 resources:
   limits:
     cpu: "4"
@@ -24,9 +9,6 @@ resources:
     nvidia.com/gpu: 1
 
 persistence:
-  storageClassName: "piraeus-lvm-single"
-  accessModes:
-    - ReadWriteMany
   volumes:
     shared-models:
       mountPath: /root/ComfyUI/models
@@ -37,15 +19,10 @@ persistence:
     shared-workflows:
       mountPath: /root/ComfyUI/user/default/workflows
 
-gpus: []
-
 affinity: {}
-nodeSelector: {}
-tolerations: []
+gpus: []
 
 securityContext:
   fsGroup: 0
   seccompProfile:
     type: RuntimeDefault
-
-hfToken: ""

@@ -5,10 +5,3 @@ questions:
     description: "The preferred GPU model. If unavailable, one will be selected randomly."
     default: ""
     group: "Global Settings"
-
-  - variable: hfToken
-    type: password
-    label: "Hugging Face Token"
-    description: "Your Hugging Face token for downloading models. Leave blank if not needed."
-    group: "Global Settings"
-    default: ""

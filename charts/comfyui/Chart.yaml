@@ -1,6 +1,6 @@
 apiVersion: v2
 name: comfyui
-description: A Helm chart for ComfyUI with GPU support
+description: Deploy ComfyUI with customizable options.
 type: application
-version: 0.1.8
+version: 0.1.9
 appVersion: "1.0.0"

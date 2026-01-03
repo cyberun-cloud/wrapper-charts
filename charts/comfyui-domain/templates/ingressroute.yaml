@@ -1,0 +1,17 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: {{ .Release.Name }}
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`{{ include "comfyui.domain" . }}`)
+      kind: Rule
+      middlewares:
+        - name: oauth2-auth
+      services:
+        - name: {{ .Release.Name }}
+          port: 8188
+  tls:
+    secretName: "{{ include "comfyui.domain" . }}-tls"
