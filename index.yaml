@@ -3,6 +3,16 @@ entries:
   comfyui:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2026-01-03T19:43:17.131107763Z"
+    description: Deploy ComfyUI with customizable options.
+    digest: 8589b3cb97eddf1d54e344c09657141a7d54906f839ffd8e1be09203ba904d92
+    name: comfyui
+    type: application
+    urls:
+    - https://github.com/cyberun-cloud/wrapper-charts/releases/download/comfyui-0.1.9/comfyui-0.1.9.tgz
+    version: 0.1.9
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2026-01-03T07:59:10.32551165Z"
     description: A Helm chart for ComfyUI with GPU support
     digest: b82c5e01023d378ad24f29a9ed442aeb551b779dc205e92d64b6cf91d8bf01a2
@@ -81,4 +91,15 @@ entries:
     urls:
     - https://github.com/cyberun-cloud/wrapper-charts/releases/download/comfyui-0.1.1/comfyui-0.1.1.tgz
     version: 0.1.1
-generated: "2026-01-03T07:59:10.325544987Z"
+  comfyui-domain:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-01-03T19:43:17.378334825Z"
+    description: Configure domain for ComfyUI Application
+    digest: 785b072eb03049ad0d47a22a1ac285cadf0904eacb569d9d2701a8494e91a65c
+    name: comfyui-domain
+    type: application
+    urls:
+    - https://github.com/cyberun-cloud/wrapper-charts/releases/download/comfyui-domain-0.1.0/comfyui-domain-0.1.0.tgz
+    version: 0.1.0
+generated: "2026-01-03T19:43:17.378384778Z"
