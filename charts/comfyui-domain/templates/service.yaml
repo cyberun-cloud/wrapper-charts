@@ -4,6 +4,7 @@ metadata:
   name: {{ .Release.Name }}
   annotations:
     service.cilium.io/global: "true"
+    service.cilium.io/global-sync-endpoint-slices: "true"
 spec:
   type: ClusterIP
   selector:

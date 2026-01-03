@@ -2,5 +2,5 @@ apiVersion: v2
 name: comfyui
 description: Deploy ComfyUI with customizable options.
 type: application
-version: 0.1.9
+version: 0.1.10
 appVersion: "1.0.0"
