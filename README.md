@@ -11,9 +11,12 @@ RELEASE=tester
 CHART=comfyui
 NAMESPACE=apps-comfyui
 
+export HTTP_PROXY=http://172.16.40.254:8888
+export HTTPS_PROXY=http://172.16.40.254:8888
 helm repo add cyberun https://cyberun-cloud.github.io/wrapper-charts/
 helm repo update
 helm install $RELEASE cyberun/$CHART -n $NAMESPACE
+
 ```
 
 After deploying both `comfyui` and `comfyui-domain` with the same release name, you can access the service at:
