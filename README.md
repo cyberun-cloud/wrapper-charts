@@ -13,5 +13,5 @@ NAMESPACE=apps-comfyui
 
 helm repo add cyberun https://cyberun-cloud.github.io/wrapper-charts/
 helm repo update
-helm install cyberun/$CHART -n $NAMESPACE
+helm install $RELEASE cyberun/$CHART -n $NAMESPACE
 ```
