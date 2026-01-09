@@ -10,13 +10,13 @@ resources:
 
 persistence:
   volumes:
-    shared-models:
+    comfyui-models:
       mountPath: /root/ComfyUI/models
-    shared-outputs:
+    comfyui-outputs:
       mountPath: /root/ComfyUI/output
-    shared-inputs:
+    comfyui-inputs:
       mountPath: /root/ComfyUI/input
-    shared-workflows:
+    comfyui-workflows:
       mountPath: /root/ComfyUI/user/default/workflows
 
 affinity: {}
