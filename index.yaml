@@ -3,6 +3,16 @@ entries:
   comfyui:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2026-01-09T10:01:32.60249792Z"
+    description: Deploy ComfyUI with customizable options.
+    digest: 6ad19ca67bd807a550f52edb81214e0b29804720d629249d0919dbaafd2059d8
+    name: comfyui
+    type: application
+    urls:
+    - https://github.com/cyberun-cloud/wrapper-charts/releases/download/comfyui-0.1.11/comfyui-0.1.11.tgz
+    version: 0.1.11
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2026-01-03T21:33:38.467698478Z"
     description: Deploy ComfyUI with customizable options.
     digest: 15a10ed191270a00335a032a62cc5acd966a2532c125847efde9e3c62488e299
@@ -122,4 +132,4 @@ entries:
     urls:
     - https://github.com/cyberun-cloud/wrapper-charts/releases/download/comfyui-domain-0.1.0/comfyui-domain-0.1.0.tgz
     version: 0.1.0
-generated: "2026-01-03T21:33:38.625750447Z"
+generated: "2026-01-09T10:01:32.602541861Z"
